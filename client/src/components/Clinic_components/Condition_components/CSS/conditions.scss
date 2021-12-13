@@ -1,0 +1,79 @@
+.conditions__container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    background: url('../../../../images/ClinicBackgroungImage.png');
+    background-size: cover;
+    margin-bottom: 30px;
+    .conditions__logo {
+        width: 500px;
+        height: auto;
+        margin: 10px;
+        border-radius: 20px;
+        flex: 0 auto;
+        img {
+            border-radius: 20px;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .conditions__content {
+        position: relative;
+        text-align: left;
+        flex: 1;
+        width: auto;
+        border: 1px solid $base-aqua-grade;
+        background: $base-aqua-grade;
+        margin: 10px;
+        border-radius: 20px;
+    }
+    .conditions__tile-header {
+        padding: 10px;
+        border-radius: 20px;
+        background: $base-violet;
+        margin: 0 auto;
+        text-align: center;
+        font-size: $base-title-font-size;
+        color: $base-aqua;
+        font-weight: bold;
+
+    }
+    .conditions__back-button {
+        height: 50px;
+        width: 50px;
+        text-align: left;
+        padding: 10px;
+    }
+    .conditions__list,
+    .conditions__tile-content {
+        padding: 0 25px;
+
+        li,
+        p {
+            margin: 0;
+            padding: 0;
+            margin-top: 10px;
+            font-size: $base-font-size;
+        }
+    }
+    .no-list {
+        list-style: none;
+
+    }
+}
+
+.d-300 {
+    width: 500px;
+    height: 450px;
+    margin: 10px;
+    border-radius: 20px;
+    flex: 0 auto;
+    img {
+        border-radius: 20px;
+        height: 100%;
+        width: 100%;
+    }
+
+}

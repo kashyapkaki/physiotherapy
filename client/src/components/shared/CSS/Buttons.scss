@@ -1,0 +1,24 @@
+@import './vars.scss';
+
+.btn-back {
+    border: 0;
+    background-color: $base-violet-font-20;
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    font-weight: bolder;
+    color: $base-blue;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+    &:hover {
+        background-color: $base-violet-font-10;
+    }
+    a {
+        color: $base-blue;
+        text-decoration: none;
+        font-weight: bolder;
+        font-size: 28px;
+    }
+}

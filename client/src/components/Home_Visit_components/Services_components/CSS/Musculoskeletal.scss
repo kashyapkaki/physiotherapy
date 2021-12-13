@@ -1,0 +1,14 @@
+.background-page {
+    background: url('../../../../images/ClinicBackgroungImage.png') no-repeat;
+    background-size: 100%;
+    width: 100%;
+}
+
+.services__tiles-content {
+    display: flex;
+    .tiles__content {
+        height: auto;
+        width: 80%;
+    }
+
+}

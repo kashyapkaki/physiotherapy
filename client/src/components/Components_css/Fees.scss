@@ -1,0 +1,243 @@
+@import "../shared/CSS/vars.scss";
+.fees-page {
+  background: url("../../images/ClinicBackgroungImage.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+.fees-page__payment-imgs {
+  display: flex;
+  justify-content: space-between;
+  img {
+    height: 350px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px 4px $base-violet-font-10;
+  }
+}
+
+.fees-page__payment-header {
+  padding: 15px;
+  font-weight: bolder;
+  font-size: $base-font-size;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 2px 3px $base-blue-10;
+  border: 0;
+  border-radius: 50px;
+}
+
+.fees-page__body {
+  margin: 0 auto;
+  overflow: auto;
+  padding: 50px;
+  position: relative;
+  height: 50%;
+  border-radius: 100px;
+  .tiles__header {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: fit-content;
+    padding: 20px;
+    color: black;
+    background: none;
+    box-shadow: 2px 2px 2px 3px $base-blue-10;
+    border-radius: 50px;
+  }
+}
+
+.fees-page__table-img {
+  width: 60px;
+  height: 60px;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-200 {
+  width: 200px;
+}
+
+.fees-page__table--header {
+  border-radius: 50px;
+  padding: 20px;
+  margin: 0 auto;
+  font-weight: bolder;
+  font-size: $base-font-size;
+  position: relative;
+  i {
+    font-weight: bolder;
+    font-size: 45px;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.flex-table--header {
+  background: $base-blue-10;
+  border-radius: 50px;
+  padding: 10px 20px;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.fees-page__rows {
+  :not(:first-child) {
+    height: auto;
+  }
+}
+
+.text-center {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: $base-font-size;
+}
+
+.fees-page__row {
+  text-align: left !important;
+  &:nth-child(1),
+  &:nth-child(2) {
+    margin-top: 65px;
+  }
+  &:last-child {
+    margin-top: 20px;
+  }
+  height: auto;
+}
+
+.fees-page__table-row-values {
+  border-radius: 50px;
+  height: auto;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.fees-page__row-content {
+  padding: 15px;
+  background: white;
+  font-family: monospace;
+  font-size: $base-font-size;
+  box-shadow: 1px 1px 1px 2px $base-blue-10;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto;
+  &:last-child {
+    margin-top: 40px;
+  }
+}
+
+.fees-page__row-div {
+  display: flex;
+  align-items: end;
+  //height: 40px;
+  margin-left: 20px;
+  .first {
+    width: 50%;
+  }
+}
+
+.fees-page__columns {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-left: 20px;
+  .fees-page__column {
+    font-weight: bold;
+    padding: 20px;
+    width: 250px;
+    border-radius: 50px;
+    margin-left: 5px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 3px $base-violet-font-10;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
+  .fees-page__column-values {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.fees-page__online-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.fees-page__content {
+  display: flex;
+  padding: 10px;
+  //box-shadow: 1px 1px 1px 3px $base-blue;
+  border-radius: 50px;
+}
+
+.fees-page__contact-us {
+  position: relative;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 1px 1px 1px 3px $base-blue;
+  width: fit-content;
+  margin: 30px auto 0 auto;
+  font-size: $base-font-size;
+  font-weight: bolder;
+  border-radius: 45px;
+}
+
+// -----------------}-------- Mobile view styles -------------------------
+@media screen and (max-width: 767px) and (min-width: 350px) {
+  .flex-table--header {
+    padding: 10px 15px;
+  }
+  .fees-page__content {
+    display: block;
+  }
+  .fees-page__payment-imgs {
+    display: block;
+  }
+  .fees-page__columns {
+    display: block;
+    margin-left: 10px;
+  }
+  .fees-page__row:nth-child(1),
+  .fees-page__row:nth-child(2) {
+    margin-top: 10px;
+  }
+}
+
+// ------------------------- ipad view styles -------------------------
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .fees-page__body {
+    padding: 30px;
+  }
+
+  .fees-page__content,
+  .fees-page__columns,
+  .fees-page__payment-imgs {
+    display: block;
+    width: 100%;
+  }
+  .fees-page__columns .fees-page__column {
+    width: 85% !important;
+  }
+  .fees-page__rows {
+    width: 20%;
+    margin: auto;
+  }
+  .fees-page__row:nth-child(1),
+  .fees-page__row:nth-child(2) {
+    margin-top: 10px;
+  }
+}

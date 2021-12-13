@@ -1,0 +1,53 @@
+.testimonials-container {
+    background: url('../../../images/ClinicBackgroungImage.png') no-repeat;
+    background-size: 100% 100%;
+    width: auto;
+    height: auto;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+    width: auto;
+    height: auto;
+    margin: 0 40px;
+}
+
+.testimonial-box {
+    padding: 10px;
+    background: $base-violet-font-50;
+    box-shadow: 0 2px 6px 4px $base-violet-font-30;
+    color: black;
+    border-radius: 50px;
+    margin-top: 20px;
+    word-wrap: break-word;
+    word-break: break-word;
+    width: fit-content;
+    height: auto;
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        left: 30px;
+        bottom: -24px;
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-width: 12px 15px;
+        border-top-color: $base-violet-font-50;
+    }
+}
+
+// ------------------------- Mobile view styles -------------------------
+@media screen and (max-width: 767px) and (min-width: 350px) {
+    .testimonials {
+        display: block;
+        margin: 0 10px;
+    }
+    .testimonial-box:not(:last-child) {
+        margin-right: 0;
+    }
+}

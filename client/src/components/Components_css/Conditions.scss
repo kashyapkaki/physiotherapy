@@ -1,0 +1,22 @@
+.clinic-conditions__container {
+    margin-bottom: 40px;
+}
+// ------------------------- Mobile view styles -------------------------
+@media screen and (max-width: 767px) and (min-width: 350px) {
+    .conditions__container .conditions__logo {
+        width: auto;
+    }
+    .conditions__container {
+        display: block;
+    }
+    .conditions__container .conditions__content {
+
+        margin-bottom: 12%;
+    }
+}
+// ------------------------- Mobile view styles -------------------------
+@media screen and (max-width: 1023px) and (min-width: 768px) { 
+    .conditions__container .conditions__logo {
+        width: 300px;
+    }
+}

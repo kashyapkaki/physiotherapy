@@ -1,0 +1,51 @@
+@import '../../../Components_css/Clinic.scss';
+
+.background-page {
+    background: url('../../../../images/ClinicBackgroungImage.png') no-repeat;
+    background-size: 100%;
+    width: 100%;
+    display: flex;
+}
+.services__title {
+ //@extend .clinic-services__intro-tile;
+ margin: 10px;
+}
+.services__logo {
+    margin: 10px;
+    img {
+        border-radius: 20px;
+    }
+
+}
+
+.services__tiles-content {
+    display: flex;
+    .tiles__content {
+        height: auto;
+        width: auto;
+    }
+
+}
+
+.services__content {
+    background: $base-aqua-grade;
+    padding: 25px;
+    width: fit-content;
+    margin: 10px;
+    border-radius: 50px;
+}
+
+.services__body {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+.services__content-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+}

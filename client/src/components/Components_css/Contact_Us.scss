@@ -1,0 +1,169 @@
+@import '../shared/CSS/vars.scss';
+.contact-us-page__wrapper {
+    background: url('../../images/ClinicBackgroungImage.png') no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 40px;
+    padding-bottom: 5px;
+}
+
+.contact-us-page__container {
+    position: relative;
+    height: 100%;
+    width: auto;
+}
+
+.contact-us-page__body {
+    display: flex;
+    flex-direction: column;
+    background: $base-violet no-repeat;
+    height: auto;
+    position: relative;
+    padding: 40px;
+    background-size: auto 50%;
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        max-width: 600px;
+        margin: 20px auto;
+        box-sizing: border-box;
+        box-shadow: 2px 0 5px 5px #c8a6ffc0;
+        padding: 10px;
+        background: white no-repeat;
+        border-radius: 20px;
+        button,
+        input,
+        select,
+        textarea {
+            padding: 10px;
+            font-size: $base-font-size;
+        }
+    }
+    input,
+    select,
+    textarea {
+        width: auto;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        border: solid 1px #cccccc;
+        padding: 4px 7px;
+    }
+    #eml,
+    #tel {
+        width: 49%;
+    }
+    #tel {
+        float: right;
+    }
+    button {
+        margin: 0;
+        padding: 0;
+        width: 120px;
+        float: right;
+        border-radius: 3px;
+        border: solid 1px #ccc;
+        cursor: pointer;
+        padding: 4px 7px;
+        border-radius: 22px;
+        &:nth-child(2) {
+            margin-left: 10px;
+        }
+    }
+    .active,
+    button:hover {
+        background-color: rgb(79, 186, 238);
+    }
+}
+
+.form-recaptcha {
+    margin: 10px auto 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-us-page__form-buttons {
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.contact-us-page__content-container {
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+    .tiles__content {
+        img {
+            width: 80%;
+            height: 80%;
+        }
+        span {
+            img {
+                width: 18px;
+                height: 18px;
+                position: relative;
+                top: 2.5px;
+                margin-right: 4px;
+            }
+        }
+    }
+}
+
+.appointment__header {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.appointment__content {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px !important;
+    margin-right: auto !important;
+    h3 {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.clinic-location__content {
+    display: flex;
+    padding: 5px !important;
+}
+
+// -----------------}-------- Mobile view styles -------------------------
+@media screen and (max-width: 767px) and (min-width: 350px) {
+    .contact-us-page__body #eml,
+    .contact-us-page__body #tel {
+        width: 90%;
+    }
+    .contact-us-page__body form {
+        width: 100%;
+    }
+    .contact-us-page__body {
+        padding: 12px;
+    }
+}
+
+/* // ------------------------- Mobile view styles ------------------------- */
+@media screen and (max-width: 767px) and (min-width: 350px) { 
+    .rc-anchor-logo-portrait {
+      margin: 10px 0 0 12px;
+      width: 58px;
+      /* -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none; */
+  }
+  .rc-anchor-normal .rc-anchor-pt {
+    margin: 2px 11px 0 0;
+    padding-right: 2px;
+    position: absolute;
+    right: 48px;
+    text-align: right;
+    width: 230px;
+  }
+  .rc-anchor-normal {
+    height: 74px;
+    width: 83%;
+  }
+  }

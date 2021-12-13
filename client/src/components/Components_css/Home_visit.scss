@@ -1,0 +1,144 @@
+$className:".home-visit";
+@import '../shared/CSS/vars.scss';
+#{$className}__wrapper {
+    background: url('../../images/ClinicBackgroungImage.png') no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    padding: 15px;
+    margin-bottom: 40px;
+    padding-bottom: 5px;
+    .contact__us-container {
+        margin-bottom: 35px;
+    }
+}
+
+#{$className}__container {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    #{$className}__logo {
+        width: auto;
+        height: auto;
+        img {
+            width: 700px;
+            height: 100%;
+        }
+    }
+}
+
+#{$className}__body {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0;
+    margin-left: 10px;
+    margin-right: auto;
+    overflow: auto;
+    height: 100%;
+    #{$className}__intro-tile {
+        margin: 0;
+        margin-bottom: 10px;
+        h4 {
+            padding: 10px;
+            margin: 0;
+        }
+        .tiles__header {
+            text-align: center;
+        }
+        .tiles__list {
+            padding: 40px;
+        }
+    }
+}
+
+#{$className}__tiles {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    .tiles {
+        flex: 1 1;
+        margin: 0;
+        &:last-child {
+            margin-left: 5px;
+        }
+        &__header {
+            text-align: center;
+        }
+    }
+    .tiles__list {
+        padding: 40px;
+    }
+}
+
+#{$className}__footer-tile {
+    margin: 0!important;
+    .tiles__header {
+        text-align: center;
+    }
+}
+
+#{$className}__logo {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+#{$className}__logo-text {
+    padding: 2px;
+    background: url('../../images/HomeVisit.svg') center;
+    background-size: cover;
+    width: 700px;
+    height: calc(100% - 20px);
+    background-repeat: no-repeat;
+    border-radius: 60px;
+}
+
+#{$className}__logo-header {
+    font-weight: bolder;
+    color:#077777;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#{$className}__logo-content {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-around;
+    #{$className}__logo-content-item {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        //        color: $base-violet;
+        font-weight: 900;
+        text-align: left;
+        padding: 20px;
+    }
+}
+
+#{$className}__logo-content-item-text {
+    margin-bottom: 20px;
+    font-size: $base-font-size;
+}
+
+// ------------------------- Mobile view styles -------------------------
+@media screen and (max-width: 767px) and (min-width: 350px) {
+    .home-visit__logo-text {
+        width: 100%;
+        background: azure;
+    padding: 15px 0 0;
+    opacity: 0.5;
+    }
+    .home-visit__container {
+        display: block;
+    }
+    .home-visit__logo-content {
+        display: block;
+    }
+    .home-visit__logo-content .home-visit__logo-content-item:nth-child(2){
+        margin-top: 0;
+        padding-top: 0;
+    }
+}

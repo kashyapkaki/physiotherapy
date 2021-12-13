@@ -1,0 +1,37 @@
+@import './About.scss';
+@import './Clinic.scss';
+
+
+.clinic-services {
+    margin-bottom: 40px;
+}
+
+.clinic-services__title {
+    @extend .about-us__title;
+    border-radius: 20px;
+}
+
+.clinic-services__body {
+    @extend .clinic-page__body;
+    margin-bottom: 20px;
+    overflow: inherit;
+}
+
+.clinic-services__logo {
+    @extend .clinic-page__logo;
+    width: 500px;
+    height: auto; 
+    .sportsinjuries__img  {
+        width: 95%;
+        height: 350px;
+        border-radius: 20px;
+    }
+    .musculoskeletal__img,
+    .exercisetherapy__img,
+    .dryneedling__img,
+    .postrehab__img {
+        width: 95%;
+        height: 100%;
+        border-radius: 20px;
+    }
+}

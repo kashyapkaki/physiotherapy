@@ -1,0 +1,83 @@
+.insurance-container {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    flex-flow: wrap;
+    box-shadow: 4px 4px 4px 4px white;
+    background: white;
+    .insurance-row {
+        background: white;
+        padding: 20px;
+        width: 150px;
+        height: 100px;
+        padding: 20px;
+        cursor: pointer;
+        position: relative;
+        word-break: break-all;
+        word-wrap: break-word;
+        .insurance-row-text {
+            word-break: break-word;
+            word-wrap: break-word;
+        }
+        .insurance-row-container {
+           width: 150px;
+            position: relative;
+
+        }
+        .insurance-row-front-img-container {
+            display: flex;
+           width: 150px;
+            justify-content: space-around;
+        }
+
+        .insurance-row-back,
+        .insurance-row-front {
+           width: 150px;
+            position: absolute;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+
+        .insurance-row-img {
+            font-size: 60px;
+        }
+    }
+    .insurance-row-front {
+        background: white;
+       width: 150px;
+        height: 100px;
+    }
+
+    .w-auto {
+        width: auto;
+    }
+    .w-200 {
+       width: 150px;
+    }
+    .h-auto {
+        height: auto;
+    }
+    .h-150 {
+        height: 150px;
+    }
+}
+
+.insurance-img {
+    width: 100%;
+    height: 100%;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+.flex-start {
+    justify-content: flex-start;
+}

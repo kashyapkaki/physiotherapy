@@ -1,0 +1,123 @@
+@import './vars.scss';
+.showSlide {
+    width: 100%;
+    height: 50%;
+}
+
+.showSlide img {
+    width: 100%;
+    height: 550px;
+    background: gray;
+}
+
+.slidercontainer {
+    position: relative;
+    margin: auto;
+}
+
+.slidercontainer:hover {
+    .left,
+    .right {
+        display: block;
+    }
+}
+
+.slidercontainer__nav {
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left,
+.right {
+    display: none;
+    cursor: pointer;
+    width: auto;
+    padding: 16px;
+    color: #05f6fb;
+    font-weight: bolder;
+    font-size: 22px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    transition: transform ease-in .1s;
+}
+
+.right {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.content {
+    color: $base-violet-font-40;
+    font-size: 70px;
+    font-weight: bolder;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    margin-top: 7%;
+    width: auto;
+    height: auto;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-word;
+    opacity: 1;
+}
+
+.slide-overlay {
+    background: rgb(31, 31, 31);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-word;
+    opacity: 0.65;
+    padding-top: 5%;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// ------------------------- Mobile view styles -------------------------
+@media screen and (max-width: 767px) and (min-width: 350px) {
+    .content {
+        font-size: 40px;
+        padding-top: 30% !important;
+    }
+}

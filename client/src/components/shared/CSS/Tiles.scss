@@ -1,0 +1,134 @@
+@import './vars.scss';
+.tiles {
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    height: auto;
+    padding: 0 0 10px;
+    flex: 1 auto;
+    width: 700px;
+    margin-bottom: 40px;
+    text-align: left;
+    &:last-child {
+        margin-right: auto;
+    }
+    &:hover {
+        box-shadow: 3px 3px 3px 3px $base-violet;
+    }
+}
+
+.tiles__header {
+    background: $base-violet;
+    color: $base-aqua;
+    height: auto;
+    padding: 10px;
+    font-size: $base-title-font-size;
+    text-align: center;
+    border-radius: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.tiles--no-background {
+    background: none;
+}
+
+.tiles--background {
+    background: $base-violet;
+}
+
+.tiles--no-list {
+    padding: 0;
+    margin: 0;
+    li {
+        list-style: none;
+    }
+}
+
+.tiles__content {
+    font-size: $base-font-size;
+    padding: 25px;
+    box-shadow: 3px 1px 5px 4px aliceblue;
+    background: #fdfdfd;
+    border-radius: 50px;
+    padding: 20px;
+    margin: 10px;
+    height: 100%;
+    line-height: 1.5;
+    a {
+        color: $base-violet-font-10;
+    }
+}
+
+.tiles__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    // text-align: center;
+    padding: 25px;
+    border-radius: 50px;
+    font-size: $base-font-size;
+    box-shadow: 3px 4px 5px 4px aliceblue;
+    background: #fdfdfd;
+    margin: 10px;
+    height: 100%;
+    a {
+        color: $base-violet-font-10;
+        text-decoration: auto;
+        font-weight: bold;
+    }
+    .tiles__item {
+        font-size: $base-font-size;
+    }
+    .tiles__item:not(:last-child) {
+        &::after {
+            white-space: pre;
+            height: 0;
+        }
+        margin-bottom: 10px;
+    }
+}
+
+.no-background {
+    background: none;
+}
+
+.tiles__content--background {
+    box-shadow: 3px 4px 5px 4px aliceblue;
+    background: #fdfdfd;
+    font-size: $base-font-size;
+    border-radius: 50px;
+    padding: 25px;
+    strong {
+        margin-top: 10px;
+    }
+}
+
+.no-box-shadow {
+    box-shadow: none;
+}
+
+.tiles__list-container {
+    text-align: left;
+}
+
+.tiles--border-violet {
+    border-color: $base-violet;
+}
+
+.tiles--border-aqua {
+    border-color: $base-aqua;
+}
+
+@mixin tiles-border {
+    @for $i from 1 through 10 {
+        .tiles--border-#{$i} {
+            border: ($i + 'px') solid;
+        }
+    }
+}
+
+.reset-tile {
+    margin: 0;
+    padding: 0;
+}

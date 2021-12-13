@@ -1,0 +1,93 @@
+$class:".home-page";
+@import '../shared/CSS/vars.scss';
+@import '../shared/CSS/InsuranceBox.scss';
+#{$class}__container {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 40px;
+    flex-direction: column;
+    #{$class}__logo {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+
+#{$class}__body {
+    position: relative;
+    background: url('../../images/ClinicBackgroungImage.png') no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    overflow: auto;
+    width: calc(100% - 80px);
+    height: 100%;
+    font-size: $base-font-size;
+    padding: 40px;
+    #{$class}__intro-tile {
+        margin: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+
+#{$class}__tiles {
+    width: 100%;
+    margin-bottom: 20px;
+    margin: 0;
+    .tiles {
+        flex: 1 1;
+        margin: 0;
+        width: 100%;
+        &:last-child {
+            margin-left: 5px;
+        }
+    }
+}
+
+#{$class}__footer-tile {
+    width: 100%!important;
+    margin: 0 auto!important;
+    a {
+        color: $base-blue!important;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+#{$class}__footer-box-container {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    #{$class}__footer-box {
+        .contact__us-container {
+            @extend .flex-end;
+            padding-right: 10px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+#{$class}__insurance-container {
+    @extend .flex-end;
+    padding-left: 10px;
+}
+
+.no-border {
+    margin-left: 2%;
+}
+
+.no-border li {
+    list-style: disc;
+}
+
+// ------------------------- Mobile view styles -------------------------
+@media screen and (max-width: 767px) and (min-width: 350px) {
+    .no-border {
+        margin-left: 0;
+    }
+}

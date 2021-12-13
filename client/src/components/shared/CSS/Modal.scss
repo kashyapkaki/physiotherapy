@@ -1,0 +1,202 @@
+@import './vars.scss';
+
+.modal__container{
+  background: #fff;
+  color: $base-aqua;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.modal {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    width: 50%;
+    height: 85%;
+    margin: 0 auto;
+    margin-top: 20px;
+    opacity: 0;
+    border: 1px solid $base-violet;
+    transition: all 0.5s ease-in-out;
+    animation: 2s ease-out 0s 1 fadeIn;
+    -webkit-animation: 2s ease-out 0s 1 fadeIn;
+    -moz-animation: 2s ease-out 0s 1 fadeIn;
+    -o-animation: 2s ease-out 0s 1 fadeIn;
+    -ms-animation: 2s ease-out 0s 1 fadeIn;
+    z-index: 99999;
+  }
+  .showModal {
+    @extend .modal;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .modal__header {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    p {
+      font-size: $base-title-font-size;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+  }
+
+  .modal__sub-header {
+    font-size: $base-sub-font-size;
+    font-weight: bold;
+  }
+  .modal .close {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: $base-title-font-size;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .modal .close:hover {
+    color: $base-violet-font-10;
+  }
+  .modal__body {
+    p,h3 {
+      font-size: $base-font-size;
+    }
+    h4 {
+      font-size: $base-content-header-size;
+    }
+  }
+  .modal__content {
+    max-height: 30%;
+    overflow: auto;
+    padding: 20px;
+    text-align: left;
+    color: black;
+    p {
+      font-size: $base-font-size;
+    }
+    .tiles__list {
+      list-style: none;
+      list-style-type: upper-roman;
+    }
+  }
+
+  .subordered__list {
+    font-size: 18px;
+  }
+
+  .modal__container {
+    height: auto;
+    border-radius: 22px
+  }
+
+  .close {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: $base-violet-font-20;
+  }
+  
+  @media screen and (max-width: 700px){
+    .modal{
+      width: 50%;
+    }
+  }
+ 
+  @keyframes fadeOut{
+    100% {
+      opacity:1;
+    }
+    0% {
+      opacity:0;
+    }
+  }
+
+  @-moz-keyframes fadeOut{
+    100% {
+      opacity:1;
+    }
+    0% {
+      opacity:0;
+    }
+  }
+  @-webkit-keyframes fadeOut{
+    100% {
+      opacity:1;
+    }
+    0% {
+      opacity:0;
+    }
+  }
+  @-o-keyframes fadeOut{
+    100% {
+      opacity:1;
+    }
+    0% {
+      opacity:0;
+    }
+  }
+
+  @-ms-keyframes fadeOut{
+    100% {
+      opacity:1;
+    }
+    0% {
+      opacity:0;
+    }
+  }
+
+
+  @keyframes fadeIn{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
