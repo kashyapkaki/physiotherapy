@@ -9,7 +9,7 @@
     "client": "npm run start --prefix client",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "node server/index.js",
-    "build": "npm run build --prefix client && cross-env NODE_ENV=production node server/index.js"
+    "build": "npm install --prefix client && npm run build --prefix client && node server/index.js"
   },
   "repository": {
     "type": "git",
