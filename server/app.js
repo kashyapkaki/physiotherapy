@@ -10,6 +10,7 @@ var whitelist = [
   "http://localhost:3000",
   "http://365physiotherapy.ie",
   "https://365physiotherapy.ie",
+  "https://www.365physiotherapy.ie"
 ];
 var corsOptions = {
   origin: function (origin, callback) {

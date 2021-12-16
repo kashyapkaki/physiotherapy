@@ -116,7 +116,7 @@ module.exports = (app) => {
 
     let mail = {
       from: req.body.email,
-      to: "kashyap3111992@gmail.com", // creds.USER,
+      to: creds.USER,
       subject: "New Message from Contact Form",
       html: content,
     };
