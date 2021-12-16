@@ -5,7 +5,12 @@ function ContactBoxes() {
     <div className="info">
       <div className="locationInfo">
         <h3>
-          Direction <i className="fa fa-map-marker"></i>
+          <a
+            target="_blank"
+            href="http://maps.google.com/maps?q=365+Physiotherapy+%7C+Physiotherapy+Dublin%7C+Physio+in+Santry+%7C+Private+Physio+in+Dublin+9,+256+Swords+Rd,+Whitehall,+Dublin"
+          >
+            Direction <i className="fa fa-map-marker"></i>
+          </a>
         </h3>
         <p>
           <a
