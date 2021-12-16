@@ -8,8 +8,8 @@ const app = express();
 
 var whitelist = [
   "http://localhost:3000",
-  "http://365physiotherapy.ie/",
-  "https://365physiotherapy.ie/",
+  "http://365physiotherapy.ie",
+  "https://365physiotherapy.ie",
 ];
 var corsOptions = {
   origin: function (origin, callback) {
