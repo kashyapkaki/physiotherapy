@@ -6,18 +6,27 @@ require("../models/Product");
 
 const app = express();
 
+var whitelist = [
+  "http://localhost:3000",
+  "http://365physiotherapy.ie/",
+  "https://365physiotherapy.ie/",
+];
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 require("../endpoints/productRoutes")(app);
 
 app.use(express.json());
-
-var corsOptions = {
-  origin: "http://localhost:3000",
-  optionsSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
   res.send("route testing");
