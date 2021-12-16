@@ -118,7 +118,7 @@ module.exports = (app) => {
       from: req.body.email,
       to: "kashyap3111992@gmail.com", // creds.USER,
       subject: "New Message from Contact Form",
-      text: content,
+      html: content,
     };
 
     transporter.sendMail(mail, (err, data) => {
