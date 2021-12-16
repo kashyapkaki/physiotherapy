@@ -32,8 +32,8 @@ $app-container-margin: 0;
   box-sizing: border-box;
   height: auto;
   width: 100%;
-  padding: 10px;
-  box-shadow: 0 5px 5px 20px $base-violet-font-10;
+  // padding: 10px;
+  // box-shadow: 0 5px 5px 20px $base-violet-font-10;
   //transform: translate(0.5, 0.5);
   //zoom: 0.98;
   // -ms-zoom: 0.4;
@@ -83,6 +83,14 @@ $app-container-margin: 0;
   width: 20px;
   height: 20px;
   text-align: left;
+  vertical-align: bottom;
+}
+
+.topAddress {
+  margin-top: 5px;
+  i {
+    color: #08e3e3;
+  }
 }
 
 .App__contact-email {
@@ -102,6 +110,13 @@ $app-container-margin: 0;
   height: 20px;
   margin-right: 2px;
   margin-top: 2px;
+  vertical-align: bottom;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
@@ -160,16 +175,18 @@ $app-container-margin: 0;
 /* Footer */
 
 .footer {
-  position: fixed;
+  position: relative;
   width: 100%;
   left: 0;
   bottom: 0;
   text-align: center;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: #7460b8;
   color: white;
   text-align: center;
   z-index: 111;
+  bottom: 40px;
   font-size: $base-font-size;
   button {
     border: none;
@@ -248,7 +265,14 @@ $app-container-margin: 0;
     width: 83%;
   }
   .switch-wrapper {
-    margin-top: 0 !important;
+    margin-top: 70px !important;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding-top: 0px;
   }
 }
 
@@ -265,4 +289,63 @@ $app-container-margin: 0;
   padding: 5px;
   text-decoration: none;
   color: #fff;
+}
+
+.topContactLinks {
+  text-decoration: none;
+  color: #7460b8;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  text-align: center;
+  z-index: 111;
+  .stickyButtons {
+    display: flex;
+    justify-content: space-evenly;
+    button {
+      background: #7460b8;
+      padding: 11px;
+      width: 150px;
+      border: none;
+      color: #08e3e3;
+      cursor: pointer;
+    }
+    .appointments {
+      width: 170px;
+      background: #7460b8;
+      padding: 11px;
+      border: none;
+      color: #08e3e3;
+    }
+  }
+}
+
+.faqs-main {
+  height: 100%;
+  padding: 10px;
+  margin-bottom: 100px;
+  .faq-title {
+    margin-top: 20px;
+    justify-content: center !important;
+    h2 {
+      color: #08e3e3;
+    }
+  }
+
+  .faq-body {
+    text-align: left;
+    background-color: #7460b8;
+    padding: 10px;
+    .row-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #08e3e3 !important;
+    }
+  }
 }

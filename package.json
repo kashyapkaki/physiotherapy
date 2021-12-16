@@ -2,14 +2,13 @@
   "name": "365physiotherapy",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server/index.js",
+    "server": "nodemon server/app.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "start": "node server/index.js",
-    "build": "npm install --prefix client && npm run build --prefix client && node server/index.js"
+    "start": "node server/app.js"
   },
   "repository": {
     "type": "git",

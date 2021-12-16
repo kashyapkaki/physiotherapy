@@ -1,99 +1,110 @@
-$class:".clinic-page";
-@import '../shared/CSS/vars.scss';
+$class: ".clinic-page";
+@import "../shared/CSS/vars.scss";
 #{$class}__wrapper {
-    background: url('../../images/ClinicBackgroungImage.png') no-repeat;
-    background-size: 100% 100%;
-    position: relative;
-    margin-bottom: 40px;
-    padding-bottom: 5px;
-    .contact__us-container {
-        margin-bottom: 35px;
-    }
+  background: url("../../images/ClinicBackgroungImage.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 5px;
+  .contact__us-container {
+    margin-bottom: 35px;
+  }
 }
 
 #{$class}__container {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 97%;
+  flex-direction: column;
+  margin-bottom: 40px;
+  justify-content: space-between;
+  padding: 20px;
+  #{$class}__logos {
     display: flex;
-    position: relative;
-    height: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
     width: 100%;
-    margin-bottom: 40px;
-    justify-content: space-between;
-    padding: 20px;
+    height: auto;
+  }
+  @media screen and (max-width: 767px) and (min-width: 350px) {
     #{$class}__logos {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 100%;
-        height: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      height: auto;
+      margin-left: 8px;
     }
-    #{$class}__logo {
-        width: 100%;
-        height: auto;
-        img {
-            border: 3px solid rgb(226, 225, 225);
-            box-shadow: 3px 3px 3px 3px $base-violet;
-            border-radius: 20px;
-            border-color: $base-violet;
-            width: 100%;
-            height: calc(100% - 40px);
-        }
+  }
+  #{$class}__logo {
+    width: 100%;
+    height: auto;
+    img {
+      border: 3px solid rgb(226, 225, 225);
+      box-shadow: 3px 3px 3px 3px $base-violet;
+      border-radius: 20px;
+      border-color: $base-violet;
+      width: 97%;
+      height: calc(100% - 40px);
     }
+  }
 }
 
 #{$class}__body {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 0;
+  margin-right: auto;
+  overflow: auto;
+  height: auto;
+  width: 100%;
+  #{$class}__intro-tile {
     margin: 0;
-    margin-right: auto;
-    overflow: auto;
-    height: auto;
-    width: 100%;
-    #{$class}__intro-tile {
-        margin: 0;
-        margin-bottom: 10px;
-    }
-    .tiles {
-        margin-bottom: 0!important;
-    }
-    .tiles__header {
-        margin: 0!important;
-    }
-    .tiles__content {
-        margin-top: 25px;
-        margin-bottom: auto;
-    }
-    .tiles__list {
-        padding: 40px;
-    }
+    margin-bottom: 10px;
+  }
+  .tiles {
+    margin-bottom: 0 !important;
+  }
+  .tiles__header {
+    margin: 0 !important;
+  }
+  .tiles__content {
+    margin-top: 25px;
+    margin-bottom: auto;
+  }
+  .tiles__list {
+    padding: 40px;
+  }
 }
 
 #{$class}__tiles {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    .tiles {
-        flex: 1 1;
-        margin: 0;
-        &:last-child {
-            margin-left: 5px;
-        }
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  .tiles {
+    flex: 1 1;
+    margin: 0;
+    &:last-child {
+      margin-left: 5px;
     }
+  }
 }
 
 #{$class}__footer-tile {
-    margin: 0!important;
+  margin: 0 !important;
 }
 
 // ------------------------- Mobile view styles -------------------------
 @media screen and (max-width: 767px) and (min-width: 350px) {
-    .clinic-page__container {
-        display: block !important;
-        padding: unset !important;
-    }
-    .clinic-page__body,
-    .clinic-services__body {
-        margin-left: 0 !important;
-    }
+  .clinic-page__container {
+    display: block !important;
+    padding: unset !important;
+  }
+  .clinic-page__body,
+  .clinic-services__body {
+    margin-left: 0 !important;
+  }
 }

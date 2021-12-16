@@ -34,6 +34,7 @@ import PainManagment from "./components/Home_Visit_components/Services_component
 import Testimonials from "./components/Testimonials";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsConditions from "./components/TermsConditions";
+import FAQs from "./components/FAQs";
 
 const routes = [
   {
@@ -215,6 +216,11 @@ const routes = [
     path: "/terms-conditions",
     exact: true,
     component: TermsConditions,
+  },
+  {
+    path: "/faq",
+    exact: true,
+    component: FAQs,
   },
 ];
 

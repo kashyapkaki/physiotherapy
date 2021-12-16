@@ -131,11 +131,27 @@ $base-height: 200px;
   flex-direction: row;
   text-align: left;
   background-color: #7460b8;
+  padding-left: 50px;
+  padding-right: 50px;
   color: white;
   .contactInfo {
     a {
       text-decoration: none;
       color: inherit;
     }
+  }
+  .locationInfo {
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+.timings {
+  display: flex;
+  margin-top: -17px;
+  .first {
+    margin-right: 10px;
   }
 }

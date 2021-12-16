@@ -114,21 +114,40 @@ function App() {
               ></img>
             </div>
           </Link>
-          <div className="App__contact-info">
-            <img
-              className="App__contact-info-icon"
-              src={PhoneIcon}
-              alt="Phone icon"
-            ></img>
-            <span>+353 830985073</span>
-          </div>
-          <div className="App__contact-email">
-            <img
-              className="App__contact-email-icon"
-              src={EmailIcon}
-              alt="Email"
-            />
-            <span>contact@365physiotherapy.ie</span>
+          <div className="header">
+            <div>
+              <img
+                className="App__contact-info-icon"
+                src={PhoneIcon}
+                alt="Phone icon"
+              ></img>
+              <a className="topContactLinks" href="tel:+353830985073">
+                <strong>0830985073</strong>
+              </a>
+            </div>
+            <div>
+              <img
+                className="App__contact-email-icon"
+                src={EmailIcon}
+                alt="Email"
+              />
+              <a
+                className="topContactLinks"
+                href="mailto:contact@365physiotherapy.ie"
+              >
+                <strong>contact@365physiotherapy.ie</strong>
+              </a>
+            </div>
+            <div className="topAddress">
+              <i className="fa fa-map-marker"></i>
+              <a
+                target="_blank"
+                className="topContactLinks"
+                href="http://maps.google.com/maps?q=365+Physiotherapy+%7C+Physiotherapy+Dublin%7C+Physio+in+Santry+%7C+Private+Physio+in+Dublin+9,+256+Swords+Rd,+Whitehall,+Dublin"
+              >
+                <strong> 256, Swords Road, Santry Dublin 9</strong>
+              </a>
+            </div>
           </div>
           <Navbar
             activeNavTab={activeTab}
@@ -140,6 +159,7 @@ function App() {
               "Testimonials",
               "Fees",
               "Booking",
+              "FAQ",
               "Contact Us",
             ]}
           >
@@ -177,6 +197,16 @@ function App() {
           </button>
         </div>
       </footer>
+      <div className="sticky">
+        <div className="stickyButtons">
+          <div className="appointments">
+            <i className="fa fa-phone"></i> Call Us 0830985073
+          </div>
+          <button>
+            <i className="fa fa-calendar"></i> Book Appointment
+          </button>
+        </div>
+      </div>
       {/* <Modal
         type="Privacy"
         showModalDialog={showPrivacyModal}

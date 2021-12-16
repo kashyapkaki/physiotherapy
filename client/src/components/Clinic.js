@@ -54,7 +54,7 @@ const Clinic = () => {
           </div>
         </div>
 
-        <div className="clinic-page__body margin-left--20 margin-right--30">
+        <div className="clinic-page__body">
           <div className="tiles clinic-page__intro-tile">
             <div className="tiles__header">About Clinic Service</div>
             <div className="tiles__content">

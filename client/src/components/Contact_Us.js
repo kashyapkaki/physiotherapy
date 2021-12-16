@@ -48,34 +48,32 @@ const Contact_Us = () => {
   const submitEmail = (data) => {
     console.log("data:" + data);
     console.log("string:" + JSON.stringify(data));
+    console.log(data["email"]);
     if (captcha != "") {
-      fetch("/api/send", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-      })
+      fetch(
+        "http://365physiotherapy.ie/mail.php?email=" +
+          data["email"] +
+          "&firstname=" +
+          data["first-name"] +
+          "&lastname=" +
+          data["last-name"] +
+          "&number=" +
+          data["number"] +
+          "&selection=" +
+          data["dropdown"] +
+          "&msg=" +
+          data["message"],
+        {
+          method: "GET",
+        }
+      )
         .then((response) => {
-          console.log("expected results" + response);
-          return response.json();
-        })
-        .then((response) => {
-          console.log(response);
-          if (response.status === "success") {
-            console.log(response.data);
-            alert("Message Sent.");
-          }
+          alert("Message Sent Successfully!");
         })
         .catch(function (err) {
-          console.log("error2" + err);
-          alert("Message Not Sent.");
+          console.log("error: " + err);
+          alert("Message Not Sent. Service Down!");
         });
-      // window.grecaptcha.ready(function() {
-      // window.grecaptcha.execute('6LdFukIaAAAAAM-L6fAcuCBsYRpLhmeaSxoB-QnX',
-      // {action: 'submit'}).then(function(token) {     // Send form value as well as
-      // token to the server   }); });
     } else {
       alert("Submit captcha.");
     }
@@ -113,7 +111,7 @@ const Contact_Us = () => {
               required
               placeholder="Last name"
               {...register("last-name")}
-              name="last-Name"
+              name="last-name"
             />
             <input
               id="eml"

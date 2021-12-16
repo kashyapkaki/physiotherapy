@@ -10,10 +10,10 @@
 
 .fees-page__payment-imgs {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   img {
     height: 350px;
-    width: 500px;
+    width: 370px;
     border-radius: 20px;
     box-shadow: 2px 2px 4px 4px $base-violet-font-10;
   }
@@ -208,8 +208,10 @@
     display: block;
   }
   .fees-page__columns {
-    display: block;
+    //display: block;
     margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
   }
   .fees-page__row:nth-child(1),
   .fees-page__row:nth-child(2) {

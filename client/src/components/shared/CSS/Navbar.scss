@@ -23,11 +23,11 @@
   margin: 0 10px;
   width: 7%;
   a {
-      color: $base-aqua;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: helvetica;
-      pointer-events: auto;
+    color: $base-aqua;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: helvetica;
+    pointer-events: auto;
   }
 }
 
@@ -41,20 +41,20 @@ a[title]:hover::after {
 // ------------------------- Mobile view styles -------------------------
 @media screen and (max-width: 767px) and (min-width: 350px) {
   .navbar__list {
-      padding: 10px;
-      width: auto;
-      font-size: 16px;
+    padding: 10px;
+    width: auto;
+    font-size: 16px;
   }
   .navbar__item {
-      padding: 5px 3px;
-      /* box-shadow: 0 0 1px 1px #8c55eb; */
-      pointer-events: none;
-      /* border-right: 2px solid #08e3e3; */
-      font-size: 10px;
-      margin: 0 0px;
+    padding: 5px 3px;
+    /* box-shadow: 0 0 1px 1px #8c55eb; */
+    pointer-events: none;
+    /* border-right: 2px solid #08e3e3; */
+    font-size: 10px;
+    margin: 0 0px;
   }
   .navbar {
-      display: none !important;
+    display: none !important;
   }
   .header-fixed {
     position: relative;
@@ -65,51 +65,51 @@ a[title]:hover::after {
 // ------------------------- ipad view styles -------------------------
 @media screen and (max-width: 1023px) and (min-width: 768px) {
   .navbar__item {
-      padding: 8px 10px;
+    padding: 8px 10px;
   }
 }
-@media screen and (min-width: 768px){
-  .nav{
-      display: none;
+@media screen and (min-width: 768px) {
+  .nav {
+    display: none;
   }
 }
 body {
   margin: 0;
 }
 .header-fixed {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 95%;
-    background-color: transparent;
-    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 95%;
+  background-color: transparent;
+  // box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.1);
 }
 
 .navbara {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    line-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  line-height: 60px;
 }
 
 .navbara .logo {
-    flex: 3; 
+  flex: 3;
 }
 
 .navbara .logo a {
-    display: block;
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
 }
 .navbara .logo a:hover {
   color: #777777;
 }
 
 .navbara nav {
-    flex: 8;
+  flex: 8;
 }
 
 .navbara label {
@@ -123,24 +123,24 @@ body {
 .navbara label i {
   height: 3px;
   position: relative;
-  transition: background .2s ease-out;
+  transition: background 0.2s ease-out;
   width: 30px;
   font-style: normal;
   font-weight: normal;
 }
 .navbara label i:before,
 .navbara label i:after {
-  content: '';
+  content: "";
   height: 100%;
   position: absolute;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   width: 100%;
 }
 .navbara label i,
 .navbara label i:before,
 .navbara label i:after {
   display: block;
-  background: #000;  
+  background: #000;
 }
 .navbara label i:before {
   top: 7px;
@@ -159,7 +159,7 @@ body {
 }
 .header #navbar-toggle:checked ~ label {
   // border: 1px solid #212121;
-  // border-radius: 50%;    
+  // border-radius: 50%;
 }
 .header #navbar-toggle:checked ~ label i {
   background: transparent;
@@ -181,86 +181,84 @@ body {
     right: -6px;
     top: 6px;
   }
-    .navbara nav {
-      visibility: hidden;
-      opacity: 0;
-      z-index: 2;
-      position: fixed;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      // height: 100%;
-      transition: all 0.3s ease-out;
-      display: table;
-      background: #ddd;
-      padding: 45px 10px;
-  background: darkcyan;
-  opacity: 0.9;
-    }
-    .navbara nav ul {
-      margin: 0;
-      padding: 0px 0;
-      display: table-cell;
-      vertical-align: middle;
-      
-    }
-    .navbara nav li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0px 20px;
-      text-align: center;
-      font-size: 14px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease-out;
-      background: aliceblue;
-      height: 35px;
-      width: 85%;
-      margin: 10px 0 0;
-      border: 1px solid;
-      border-radius: 20px;
-    }
-    .navbara nav li:hover {
-      background: #212121;
-    }
-    .navbara nav li:hover a {
-      color: #fff;
-      transition: all 0.3s ease-out;
-    }
-    .navbara nav li a {
-      color: #212121;
-    }
+  .navbara nav {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    // height: 100%;
+    transition: all 0.3s ease-out;
+    display: table;
+    background: #ddd;
+    padding: 45px 10px;
+    background: darkcyan;
+    opacity: 0.9;
+  }
+  .navbara nav ul {
+    margin: 0;
+    padding: 0px 0;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .navbara nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    background: aliceblue;
+    height: 35px;
+    width: 85%;
+    margin: 10px 0 0;
+    border: 1px solid;
+    border-radius: 20px;
+  }
+  .navbara nav li:hover {
+    background: #212121;
+  }
+  .navbara nav li:hover a {
+    color: #fff;
+    transition: all 0.3s ease-out;
+  }
+  .navbara nav li a {
+    color: #212121;
+  }
 }
 
 @media (min-width: 768px) {
-    .navbara nav ul {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: space-around;
-      text-align: center;
-      list-style: none;
-    }
-    .navbara nav li {
-      flex: 1;
-    }
-    .navbara nav li a {
-      display: block;
-      padding: 0 8px;
-      font-size: 16px;
-      line-height: 60px;
-      color: #fff;
-      text-decoration: none;
-    }
-    .navbara nav li.active {
-      background: #555;  
-    }
-    .navbara nav li:hover {
-      background: #333;
-    }
-    .navbara label {
-      display: none;
-    }
+  .navbara nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    list-style: none;
+  }
+  .navbara nav li {
+    flex: 1;
+  }
+  .navbara nav li a {
+    display: block;
+    padding: 0 8px;
+    font-size: 16px;
+    line-height: 60px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .navbara nav li.active {
+    background: #555;
+  }
+  .navbara nav li:hover {
+    background: #333;
+  }
+  .navbara label {
+    display: none;
+  }
 }
-
