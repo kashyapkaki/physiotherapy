@@ -26,9 +26,6 @@ const box1 = [
     img: SPONSORIRISHLIFE,
     link: "https://www.irishlifehealth.ie/benefits/back-up-benefit",
   },
-];
-
-const box2 = [
   {
     img: SPONSORISCP,
     link: "https://askthephysio.ie/",
@@ -183,9 +180,6 @@ const Home_Visit = () => {
       </div>
       <div className="home-page__footer-box justify-center">
         <InsuranceBox imgs={box1} right={true}></InsuranceBox>
-      </div>
-      <div className="home-page__footer-box">
-        <InsuranceBox imgs={box2} left={true}></InsuranceBox>
       </div>
       <div className="home-page__footer-box-container">
         <div className="margin-center w-100p">

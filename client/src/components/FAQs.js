@@ -72,8 +72,12 @@ const data = {
 
 const FAQs = () => {
   return (
-    <div className="faqs-main">
-      <Faq data={data} />
+    <div className="faq-container">
+      <div className="faq__header">
+        <div className="faqs-main">
+          <Faq data={data} />
+        </div>
+      </div>
     </div>
   );
 };
