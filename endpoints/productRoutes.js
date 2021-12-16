@@ -80,11 +80,43 @@ module.exports = (app) => {
     let email = req.body.email;
     let service = req.body.dropdown;
     let message = req.body.message;
-    let content = `name: ${name} \n contact: ${contact} \n email: ${email} \n message: ${message} \n service: ${service}`;
+    let content = `<html>
+    <head>
+    <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    </style>
+    </head>
+    <body>
+    <p>Hi Admin!</p>
+    <p>You have new message from contact form. Form details given below.</p>
+    <table>
+    <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Selection</th>
+    <th>Message</th>
+    </tr>
+    <tr>
+    <td>${req.body["first-name"]}</td>
+    <td>${req.body["last-name"]}</td>
+    <td>${email}</td>
+    <td>${contact}</td>
+    <td>${service}</td>
+    <td>${message}</td>
+    </tr>
+    </table>
+    </body>
+    </html>
+    `;
+    // `name: ${name} \n contact: ${contact} \n email: ${email} \n message: ${message} \n service: ${service}`;
 
     let mail = {
       from: req.body.email,
-      to: creds.USER,
+      to: "kashyap3111992@gmail.com", // creds.USER,
       subject: "New Message from Contact Form",
       text: content,
     };
