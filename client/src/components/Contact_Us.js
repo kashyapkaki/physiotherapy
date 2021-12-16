@@ -50,29 +50,28 @@ const Contact_Us = () => {
     console.log("string:" + JSON.stringify(data));
     console.log(data["email"]);
     if (captcha != "") {
-      fetch(
-        "http://365physiotherapy.ie/mail.php?email=" +
-          data["email"] +
-          "&firstname=" +
-          data["first-name"] +
-          "&lastname=" +
-          data["last-name"] +
-          "&number=" +
-          data["number"] +
-          "&selection=" +
-          data["dropdown"] +
-          "&msg=" +
-          data["message"],
-        {
-          method: "GET",
-        }
-      )
+      fetch("https://physiotherapy365.herokuapp.com/api/send", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      })
         .then((response) => {
-          alert("Message Sent Successfully!");
+          console.log("expected results" + response);
+          return response.json();
+        })
+        .then((response) => {
+          console.log(response);
+          if (response.status === "success") {
+            console.log(response.data);
+            alert("Message Sent.");
+          }
         })
         .catch(function (err) {
-          console.log("error: " + err);
-          alert("Message Not Sent. Service Down!");
+          console.log("error2" + err);
+          alert("Message Not Sent.");
         });
     } else {
       alert("Submit captcha.");

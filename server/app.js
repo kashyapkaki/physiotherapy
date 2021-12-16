@@ -11,7 +11,13 @@ app.use(bodyParser.json());
 require("../endpoints/productRoutes")(app);
 
 app.use(express.json());
-app.use(cors());
+
+var corsOptions = {
+  origin: "http://localhost:3000",
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
   res.send("route testing");
